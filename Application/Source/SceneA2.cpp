@@ -62,8 +62,7 @@ void SceneA2::Update(double dt)
 {
 	fps = 1.f / dt;
 	static bool bLButtonState = false;
-
-	//Debug
+	//Debug controls
 	{
 		if (Application::IsKeyPressed('1'))
 		{
@@ -91,6 +90,8 @@ void SceneA2::Update(double dt)
 			Application::DisableCursor();
 		}
 	}
+
+	camera.Updatemovement(dt);
 
 	if (Application::IsKeyPressed('F'))
 	{

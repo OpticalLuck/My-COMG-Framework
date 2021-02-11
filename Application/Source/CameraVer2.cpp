@@ -4,7 +4,7 @@
 
 CameraVer2::CameraVer2():
 	target(Vector3(0,0,0)),
-	mode(THIRD_PERSON),
+	mode(FREE_VIEW),
 	sensitivity(0.05f),
 	speed(5.f),
 	distance(8.f),
