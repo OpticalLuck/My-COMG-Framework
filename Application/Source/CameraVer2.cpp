@@ -26,7 +26,7 @@ void CameraVer2::Init(Vector3 position, const Vector3& view, const Vector3& up)
 	this->up = up.Normalized();
 }
 
-void CameraVer2::Update(float x_offset, float y_offset)
+void CameraVer2::Update(double x_offset, double y_offset)
 {
 	if (Controls)
 	{

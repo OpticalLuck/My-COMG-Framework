@@ -24,8 +24,8 @@ unsigned Application::m_height;
 float lastX = 400, lastY = 300; //Middle of screen
 float Application::FOV = 45;
 
-float Application::xoffset = 0;
-float Application::yoffset = 0;
+double Application::xoffset = 0;
+double Application::yoffset = 0;
 
 
 //Define an error callback
@@ -110,7 +110,6 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 		Application::xoffset += xpos - lastX;
 		Application::yoffset += lastY - ypos;
 
-		
 		lastX = xpos;
 		lastY = ypos;
 	}

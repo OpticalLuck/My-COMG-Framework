@@ -29,10 +29,10 @@ public:
 	virtual void Render();
 	virtual void Exit();
 
-	virtual void UpdateMousePos(float xoffset, float yoffset) override;
+	virtual void UpdateMousePos(double xoffset, double yoffset) override;
 
 private:
-	float fps;
+	double fps;
 	Renderer* renderer;
 	MeshList* meshlist;
 	GameObject * Axis;

@@ -36,7 +36,7 @@ public:
 	void RenderText(Mesh* mesh, std::string text, Color color, int textdataArray[]);
 	void RenderDialogue(Mesh* mesh, std::string text, Color color, int textdataArray[], int index);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y, int textdataArray[]);
-	void RenderMeshOnScreen(Mesh* mesh, int x, int y, int sizex, int sizey);
+	void RenderMeshOnScreen(Mesh* mesh, float x, float y, float sizex, float sizey);
 
 	//Transformation ModelStack
 	void AddTransformation(Vector3 Translate, Vector3 Pos, Vector3 Rotation, Vector3 Scale);

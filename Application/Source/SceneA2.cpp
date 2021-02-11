@@ -134,7 +134,7 @@ void SceneA2::Exit()
 
 }
 
-void SceneA2::UpdateMousePos(float xoffset, float yoffset)
+void SceneA2::UpdateMousePos(double xoffset, double yoffset)
 {
 	camera.Update(xoffset, yoffset);
 }
