@@ -39,13 +39,12 @@ public:
 	void RenderMeshOnScreen(Mesh* mesh, float x, float y, float sizex, float sizey);
 
 	//Transformation ModelStack
-	void AddTransformation(Vector3 Translate, Vector3 Pos, Vector3 Rotation, Vector3 Scale);
+	void AddTransformation(Vector3 Translate, Vector3 Rotation, Vector3 Scale);
 	void AddTranslate(float x, float y, float z);
 	void AddRotate(float x, float y, float z);
 	void AddScale(float x, float y, float z);
 
 	//for character 
-	void AddTransformation(Vector3 Translate, Vector3 Pos, Vector3 Rotation, Vector3 Scale, Vector3 PivotRotate);
 	void PushTransform();
 	void PopTransform();
 
