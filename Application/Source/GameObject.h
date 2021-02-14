@@ -5,6 +5,7 @@
 #include "Mesh.h"
 #include "Vertex.h"
 #include "Renderer.h"
+#include "Collision.h"
 
 class GameObject
 {
@@ -44,6 +45,9 @@ private:
     //Basic Object Values
     unsigned int ID;
     Mesh* mesh;
+
+    //Collision
+    Collision* CollisionBox;
 
     GameObject* Parent;
     std::vector<GameObject*> Child;

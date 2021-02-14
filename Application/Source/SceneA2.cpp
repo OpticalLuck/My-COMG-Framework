@@ -20,19 +20,14 @@ void SceneA2::Init()
 	//Init Meshlist
 	meshlist = new MeshList();
 	//Create Light
-	for (int i = 0; i < 4; i++)
-	{
-		lights[i] = new Light(renderer->GetprogramID(), i);
-	}
+	lights[0] = new Light(renderer->GetprogramID(), 0);
+	
 
 	camera.Init(Vector3(0, 3, 8), Vector3(0, 0, -1), Vector3(0, 1, 0));
 
 	Axis = goManager.CreateGO<GameObject>(meshlist->GetMesh(MeshList::MESH_AXIS));
 	Quad = goManager.CreateGO<GameObject>(meshlist->GetMesh(MeshList::MESH_QUAD));
 	NPC =  goManager.CreateGO<Character>(meshlist->GetMesh(MeshList::MESH_QUAD));
-
-	GameObject* obj = goManager.getObj(NPC->GetID());
-	std::cout << obj->GetID();
 
 	{
 	lights[0]->Set(Light::LIGHT_POINT,
@@ -97,8 +92,8 @@ void SceneA2::Render()
 	renderer->SetCamera(camera);
 
 
-	Axis->Draw(renderer, false);
-	Quad->Draw(renderer, true);
+	//Axis->Draw(renderer, false);
+	//Quad->Draw(renderer, true);
 
 	//Light
 	renderer->SetLight(lights[0]);
@@ -107,7 +102,6 @@ void SceneA2::Render()
 
 void SceneA2::Exit()
 {
-
 }
 
 void SceneA2::UpdateMousePos(double xoffset, double yoffset)
